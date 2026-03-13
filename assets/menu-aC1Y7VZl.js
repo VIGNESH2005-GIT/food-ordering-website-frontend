@@ -1,0 +1,1 @@
+import"./style-COChlj8A.js";window.addToCart=function(t,r){let a=JSON.parse(localStorage.getItem("cart"))||[];a.push({name:t,price:r}),localStorage.setItem("cart",JSON.stringify(a)),alert(t+" added to cart!")};

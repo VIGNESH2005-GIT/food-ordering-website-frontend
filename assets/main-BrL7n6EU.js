@@ -1,0 +1,1 @@
+import"./style-COChlj8A.js";document.getElementById("log").addEventListener("submit",function(e){e.preventDefault();let t=document.getElementById("email").value,a=document.getElementById("password").value;t==="admin@gmail.com"&&a==="admin@123"?(alert("Login successfull..!"),window.location.href="./menu.html"):alert("Check the mail id and password and tray again..!")});
