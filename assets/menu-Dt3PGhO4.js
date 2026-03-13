@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */let a=JSON.parse(localStorage.getItem("cart"))||[];window.addToCart=function(t,o){console.log("Clicked:",t,o),a.push({name:t,price:o}),localStorage.setItem("cart",JSON.stringify(a)),alert(t+" added to cart!")};
