@@ -9,7 +9,7 @@ A modern, responsive frontend application for a food delivery platform. This pro
 * **Clean Architecture:** Separated concerns with modular CSS and JS files.
 
 ## 🛠️ Tech Stack
-* **Core:** HTML5, CSS3, JavaScript (ES6)
+* **Core:** HTML5, TailWindCSS, JavaScript (ES6)
 * **Environment:** Node.js & NPM
 
 ## 💻 Installation & Local Development
