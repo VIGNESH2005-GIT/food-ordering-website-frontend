@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Food Menu</title>
+<link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-gray-200">
+
+<!-- TOP HEADER -->
+<div class="flex items-center justify-between bg-white p-4 shadow">
+
+<h1 class="text-red-600 font-bold text-5xl ml-6">Biriyani</h1>
+
+<div class="flex items-center gap-6">
+
+<div class="flex items-center gap-2">
+<span class="font-semibold">📍</span>
+<select class="border rounded px-2 py-1">
+<option>Home</option>
+<option>Work</option>
+<option>Hostel</option>
+</select>
+</div>
+
+<input 
+type="text"
+placeholder="Search food..."
+class="border rounded-lg px-3 py-1"
+/>
+
+<div id="carte" class="font-semibold cursor-pointer">
+    <a href="cart.html">
+🛒 Cart
+    </a>
+</div>
+
+</div>
+
+</div>
+<div id="cartBox" class="hidden bg-white shadow-lg p-4 w-64 absolute right-6 top-20">
+
+<h2 class="font-bold text-lg mb-3">Cart Items</h2>
+
+<ul id="cartItems" class="space-y-2"></ul>
+
+</div>
+
+
+<!-- MAIN LAYOUT -->
+<div class="flex gap-6">
+
+<!-- LEFT MENU -->
+<div class=" p-6 bg-white shadow-lg w-60">
+
+<h2 class="text-2xl font-bold mb-6">Menu</h2>
+
+<ul class="space-y-4">
+<li class="text-lg">About</li>
+<li class="text-lg">Service</li>
+<li class="text-lg">Your Order</li>
+<li id="wishlistBtn" class="text-lg"><a href="cart.html">Wishlist</a></li>
+<li id="cartBtn" class="text-lg"><a href="cart.html">Cart</a></li>
+</ul>
+
+</div>
+
+
+<!-- FOOD GRID -->
+<div class="p-8 grid grid-cols-4 gap-6 w-2/3 ">
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/mushroom.jpg" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Mushroom Biriani</h3>
+<p>20$</p>
+<button  onclick="addToCart('Mushroom Biriyani',30)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/mushroom.jpg" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Burger</h3>
+<p>30$</p>
+<button onclick="addToCart('Burger',30)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/OIP (6).webp" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Hyderabadi Special</h3>
+<p>40$</p>
+<button  onclick="addToCart('Hyderabadi Special',40)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/download (1).webp" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Chicken Dum</h3>
+<p>50$</p>
+<button  onclick="addToCart('Chicken Dum',50)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/download.webp" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Beef Biriyani</h3>
+<p>60$</p>
+<button  onclick="addToCart('Beef Biriyani',60)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/download (2).webp" class="w-50 h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Veg Biriyani</h3>
+<p>70$</p>
+<button  onclick="addToCart('Veg Biriyani',70)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/OIP (5).webp" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Chicken Biriyani</h3>
+<p>80$</p>
+<button  onclick="addToCart('chicken Biriani',80)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+<div class="bg-white rounded-lg shadow p-4 text-center">
+<img src="src/OIP (6).webp" class="w-full h-32 object-cover rounded">
+<h3 class="mt-2 font-bold">Malabar Biriyani</h3>
+<p>90$</p>
+<button  onclick="addToCart('Malabar Biriyani',90)" class="mt-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-gray-700">
+Add to Cart
+</button>
+</div>
+
+</div>
+<div class="bg-white p-6 shadow-lg w-64 mt-10 ">
+    <h2 class="text-2xl font-bold text-red-400 underline">Varieties</h2>
+   
+    <div class="flex items-center gap-3 mt-10">
+<img src="src/mushroom.jpg" class="w-8 h-8 rounded-full">
+<span class="font-bold text-2xl hover:bg-red-100">Biriyani</span>
+</div>
+
+<div class="flex items-center gap-3 mt-10">
+<img src="src/OIP.webp" class="w-8 h-8 rounded-full">
+<span class="font-bold text-2xl hover:bg-red-100">Shake</span>
+</div>
+ 
+<div class="flex items-center gap-3 mt-10">
+<img src="src/OIP (2).webp" class="w-8 h-8 rounded-full">
+<span class="font-bold text-2xl hover:bg-red-100">Ice creams</span>
+</div>
+ 
+<div class="flex items-center gap-3 mt-10">
+<img src="src/OIP (3).webp" class="w-8 h-8 rounded-full">
+<span class="font-bold text-2xl  hover:bg-red-100">Dosa</span>
+</div>
+ 
+<div class="flex items-center gap-3 mt-10">
+<img src="src/OIP (1).webp" class="w-8 h-8 rounded-full">
+<span class="font-bold text-2xl hover:bg-red-100">South Indian</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+</body>
+<script src="menu.js">
+</script>
+</html>
